@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node & Frontend
+web/node_modules/
+web/dist/assets/*.map
+.npm/
+
+# Data backups and local temporary files
+data/backups/
+data/*.tmp*
+*.tmp*
+user_presets/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "library_id": "default",
+  "updated_at": "2026-11-11T09:34:58.225474+00:00",
+  "entries": [
+    {
+      "id": "d1bbf298a6aa45d4b03c538e196a9941",
+      "title": "Portrait Lighting & Refiner Composition",
+      "path": "entries/d1bbf298a6aa45d4b03c538e196a9941.json",
+      "content_hash": "sha256:22ed3385087382d5be8ad234716fed42a64aa9a02a1d29740c05a45d2f67c485",
+      "tags": [
+        "portrait",
+        "refiner",
+        "starter"
+      ],
+      "version": "1.0.0",
+      "updated_at": "2026-11-11T08:28:18.545431+00:00",
+      "requirements_count": 3,
+      "preview": null
+    }
+  ]
+}

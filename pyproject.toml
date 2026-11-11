@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-libretto"
+version = "1.0.0"
+description = "Local-first ComfyUI extension for creating, organizing, reusing, and inspecting named workflow compositions."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Rohit" }]
+keywords = ["comfyui", "workflows", "custom-nodes", "composition", "library"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: ComfyUI",
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["libretto*", "nodes*"]
+exclude = ["tests*", "web*"]
+
+[tool.comfy]
+PublisherId = "libretto"
+DisplayName = "ComfyUI-Libretto"
+Icon = ""
+

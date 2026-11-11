@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LibrettoPackageV1",
+  "type": "object",
+  "required": ["package_format", "package_version", "entry"],
+  "properties": {
+    "package_format": {
+      "type": "string",
+      "enum": ["libretto-package"]
+    },
+    "package_version": {
+      "type": "string"
+    },
+    "exported_at": {
+      "type": "string"
+    },
+    "entry": {
+      "$ref": "entry-v1.schema.json"
+    }
+  }
+}

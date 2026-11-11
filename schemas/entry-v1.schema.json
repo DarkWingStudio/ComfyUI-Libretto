@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LibrettoEntryV1",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "version", "workflow"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [1]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_\\-\\.]{1,64}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 50 },
+      "maxItems": 30
+    },
+    "version": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string" },
+        "origin": { "type": ["string", "null"] }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "comfyui": { "type": "string" },
+        "libretto": { "type": "string" }
+      }
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "node_classes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "models": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "interfaces": {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "value_type": { "type": "string" },
+              "description": { "type": ["string", "null"] },
+              "node_id": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "value_type": { "type": "string" },
+              "description": { "type": ["string", "null"] },
+              "node_id": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "required": ["format", "data"],
+      "properties": {
+        "format": { "type": "string" },
+        "data": { "type": "object" }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "preview": { "type": ["string", "null"] }
+      }
+    },
+    "content_hash": {
+      "type": "string"
+    }
+  }
+}
